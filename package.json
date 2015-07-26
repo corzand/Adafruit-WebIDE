@@ -12,11 +12,11 @@
     "request": "2.14.0",
     "socket.io": "0.9.13",
     "gitty": "git://github.com/jwcooper/Gitty.git",
-    "jsDAV": "git://github.com/jwcooper/jsDAV.git",
+    "jsDAV": "git://github.com/corzand/jsDAV.git",
     "connect": "2.7.3",
     "connect-redis": "1.x",
     "redis": "0.8.2",
-    "tty.js": "git://github.com/jwcooper/tty.js.git",
+    "tty.js": "git://github.com/corzand/tty.js.git",
     "validator": "0.4.25",
     "winston": "0.6.2",
     "later": "git://github.com/jwcooper/later.git"
