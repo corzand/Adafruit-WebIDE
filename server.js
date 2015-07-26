@@ -39,7 +39,7 @@ winston.info("REPOSITORY_PATH", REPOSITORY_PATH);
 
 //check for the existence of the logs directory, if it doesn't
 //exist, create it prior to starting the child process.
-var exists = path.existsSync(__dirname + '/logs');
+var exists = fs.existsSync(__dirname + '/logs');
 if (!exists) {
   fs.mkdirSync(__dirname + '/logs', 0755);
   winston.info('created logs folder');
@@ -321,18 +321,18 @@ function setHostName(req) {
 function serverInitialization(app) {
 
   //setup repositories path
-  var exists = path.existsSync(REPOSITORY_PATH);
+  var exists = fs.existsSync(REPOSITORY_PATH);
   if (!exists) {
     fs.mkdirSync(REPOSITORY_PATH, 0777);
     winston.info('created repositories folder');
   }
 
   //setup symlink to webide home, if it exists:
-  var has_webide_path = path.existsSync("/home/webide");
+  var has_webide_path = fs.existsSync("/home/webide");
   if (has_webide_path) {
     //Creating symbolic link to repositories path
     winston.info('Linked repository paths: /home/webide/repositories');
-    if (!path.existsSync("/home/webide/repositories")) {
+    if (!fs.existsSync("/home/webide/repositories")) {
       fs.symlinkSync(REPOSITORY_PATH, "/home/webide/repositories", 'dir');
     }
   }
