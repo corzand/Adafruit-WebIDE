@@ -14,7 +14,7 @@
     "gitty": "git://github.com/jwcooper/Gitty.git",
     "jsDAV": "git://github.com/corzand/jsDAV.git",
     "connect": "2.7.3",
-    "connect-redis": "1.x",
+    "connect-redis": "1.4.7",
     "redis": "0.8.2",
     "tty.js": "git://github.com/corzand/tty.js.git",
     "validator": "0.4.25",
